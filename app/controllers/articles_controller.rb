@@ -3,6 +3,10 @@ class ArticlesController < ApplicationController
 	def new
 	end
 
+	def show
+		@article = Article.find(params[:id])
+	end
+
 	def create
 		#to see what params we get from article/new page
 		#render plain: params[:article].inspect
