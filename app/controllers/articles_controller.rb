@@ -10,6 +10,7 @@ class ArticlesController < ApplicationController
 
 		if @article.valid?
 			@article.save
+			redirect_to @article #to avoid 2ble submiting
 		else
 			render action: 'new'
 		end
