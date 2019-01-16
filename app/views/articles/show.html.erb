@@ -3,6 +3,8 @@
 	<%= @article.text %>
 </p>
 
+<hr />
+
 <p>
 	<%= form_for([@article, @article.comments.build]) do |f| %>
 		<p>
