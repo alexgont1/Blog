@@ -5,10 +5,21 @@
 
 <hr />
 
+<h2>Comments</h2>
+
+<% @article.comments.each do |comment| %>
+	<p>
+		<i><%= comment.author %> said:</i><br />
+		<%= comment.body %>
+	</p>
+<% end %>
+
+<hr />
+<h2>Add comment</h2>
+
 <p>
 	<%= form_for([@article, @article.comments.build]) do |f| %>
 		<p>
-			<b>Comment:</b><br />
 			<%= f.label :author %><br />
 			<%= f.text_field :author %>
 		</p>
