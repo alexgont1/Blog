@@ -43,12 +43,8 @@ class ArticlesController < ApplicationController
 		@article = Article.find(params[:id])
 		@article.destroy
 
-		@articles = Article.all
-
-		#redirect_to @articles_path
+		redirect_to articles_path
 		
-		render action: 'index'
-
 	end
 
 	private
