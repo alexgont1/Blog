@@ -9,4 +9,15 @@ describe Article do
 	describe "assosiations" do
 		it { should have_many :comments }
 	end
+
+	describe "#subject" do
+		it "returns the article title" do
+			#create article
+			article = create(:article, title: 'Test article')
+
+			#assert (check)
+			expect(article.subject).to eq 'Test article'
+		end
+	end
+
 end
